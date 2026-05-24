@@ -144,14 +144,6 @@ void sl_zigbee_af_stack_status_cb(sl_status_t status)
  */
 void sl_zigbee_af_main_init_cb(void)
 {
-  // ---- Custom EUI64 override ----
-  // Bytes are stored LITTLE-ENDIAN.
-  // This array represents the IEEE address 02:21:84:5f:ba:6a:38:01
-  // (reversed because EmberZNet stores EUIs in little-endian internally)
-  uint8_t custom_eui64[8] = {0x01, 0x38, 0x6a, 0xba, 0x5f, 0x84, 0x21, 0x02};
-  sl_zigbee_set_eui64(custom_eui64);
-  // ---- End EUI64 override ----
-
   sl_zigbee_af_event_init(&commissioning_event, commissioning_event_handler);
 
   #if defined(SL_CATALOG_SIMPLE_BUTTON_PRESENT)

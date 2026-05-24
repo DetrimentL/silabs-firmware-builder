@@ -21,7 +21,6 @@ add_components:
       - btn1
 
 c_defines:
-  EMBER_AF_USE_CUSTOM_EUI64: 1
   SL_IOSTREAM_USART_VCOM_BAUDRATE: 115200
   SL_IOSTREAM_USART_VCOM_FLOW_CONTROL_TYPE: uartFlowControlSoftware
 
